@@ -1,0 +1,98 @@
+@import url("https://use.typekit.net/jmk3xov.css");
+
+:root {
+  /* CSS variables */
+  --dark-bg: rgba(15, 15, 15, 0.95);
+  --spacing: 350px;
+
+  font-family: brandon-grotesque, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  background-color: #170C26;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation-name: canvasTransition;
+  animation-duration: 2s;
+}
+
+main {
+  position: absolute;
+  z-index: 99;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+  margin: 0 auto;
+  padding: 120px 0;
+
+  color: white;
+}
+
+h1,
+h2,
+h3,
+blockquote {
+  font-family: elevon, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+header {
+  grid-column: 2 / span 5;
+  margin-bottom: var(--spacing);
+  padding: 2rem;
+
+  font-size: 2.5rem;
+
+  background: var(--dark-bg);
+}
+
+section {
+  grid-column: 2 / 8;
+  margin-bottom: var(--spacing);
+  padding: 1rem;
+
+  font-size: 1.25rem;
+  line-height: 1.5;
+
+  background: var(--dark-bg);
+}
+
+blockquote {
+  grid-column: 2 / span 9;
+  margin: 0;
+  margin-bottom: var(--spacing);
+  padding: 0;
+}
+
+blockquote p {
+  display: inline;
+
+  color: black;
+  line-height: 1;
+  font-size: 4rem;
+
+  background-color: white;
+}
+
+.left {
+  grid-column: 6 / 12;
+}
+
+@keyframes canvasTransition {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
